@@ -5,7 +5,8 @@ public:
         if(x < 0)
             return false;
         
-        ll n = x, comp = 0;
+        int n = x;
+        unsigned int comp = 0;
         
         while(n){
             comp = comp*10 + n%10;
