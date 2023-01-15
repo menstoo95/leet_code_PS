@@ -59,7 +59,7 @@ public:
         for(int i = 2; i < sze-2; i++){
             for(int j = 0; j < 10; j++){
                 for(int k = 0; k < 10; k++){
-                    ans = (ans + (int)((long long)fcnt[i-1][j*10+k] * (long long)bcnt[i+1][k+j*10] % 1000000007LL)) % 1000000007;
+                    ans = (ans + (int)((long long)fcnt[i-1][j*10+k] * (long long)bcnt[i+1][k+j*10] % 1'000'000'007LL)) % 1'000'000'007;
                 }
             }
         }
