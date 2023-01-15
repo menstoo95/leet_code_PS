@@ -22,16 +22,13 @@ public:
         for(int i = 0; i < 27; i++)
             parent[i] = i;
         
-        for(int i = 0; i < s1.size(); i++){
-            // cout << s1[i] - 'a' << endl;
+        for(int i = 0; i < s1.size(); i++)
             union_sets(s1[i]-'a', s2[i]-'a');
-        }
+        
         
         string ans = "";
-        
-        for(int i = 0; i < baseStr.size(); i++){
+        for(int i = 0; i < baseStr.size(); i++)
             ans += find_set(baseStr[i]-'a') + 'a';
-        }
         
         return ans;
     }
