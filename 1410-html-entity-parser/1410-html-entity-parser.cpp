@@ -1,14 +1,8 @@
 class Solution {
 public:
     string entityParser(string text) {
-        unordered_map<string, string> hs;
+        unordered_map<string, string> hs = {{"&quot;", "\""}, {"&apos;", "\'"}, {"&amp;", "&"}, {"&gt;", ">"}, {"&lt;", "<"}, {"&frasl;", "/"}};
         string ans = "";
-        hs["&quot;"] = "\"";
-        hs["&apos;"] = "\'";
-        hs["&amp;"] = "&";
-        hs["&gt;"] = ">";
-        hs["&lt;"] = "<";
-        hs["&frasl;"] = "/";
         
         for(int i = 0; i < text.size(); i++){
             if(text[i] == '&'){
