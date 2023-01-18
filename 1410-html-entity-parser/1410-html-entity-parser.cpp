@@ -29,7 +29,6 @@ public:
                 }
                 else{
                     if(hs.find(res) == hs.end()){
-                        cout << "hey~" << endl;
                         ans.push_back(text[i]);
                         continue;
                     }
