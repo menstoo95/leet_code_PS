@@ -19,12 +19,6 @@ public:
                 ans += 1 << i;
             }
         }
-        // for(int i = 31; i >= 0; i--){
-        //     if ((signed)((unsigned)dividend >> i) - divisor >= 0){
-        //         ans += 1 << i;
-        //         dividend -= divisor << i;
-        //     }
-        // }
         
         return isneg ? -ans : ans;
         // return ((long long)dividend / divisor) > INT_MAX ? INT_MAX : dividend / divisor;
