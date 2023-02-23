@@ -1,26 +1,32 @@
 class Solution {
 public:
-    int divide(int dividend, int divisor) {
-//         bool isneg = false;
-//         int ans = 0;
-//         if(divisor < 0)
-//             isneg = !isneg;
-//         if(dividend < 0)
-//             isneg = !isneg;
+    int divide(long dividend, long divisor) {
+        if(dividend == INT_MIN && divisor == -1) return INT_MAX;
         
-//         dividend = abs(dividend);
-//         divisor = abs(divisor);
+        bool isneg = false;
+        long long ans = 0;
+        if(divisor < 0)
+            isneg = !isneg;
+        if(dividend < 0)
+            isneg = !isneg;
         
-//         for(int i = 31; i >= 0; i--){
-//             if((divisor << i) <= dividend){
-//                 dividend -= (divisor << i);
-//                 ans += (1 << i);
-//             }
-//         }
+        dividend = abs(dividend);
+        divisor = abs(divisor);
         
-//         cout << ans << endl;
+        for(int i = 31; i >= 0; i--){
+            if(divisor << i <= dividend){
+                dividend -= divisor << i;
+                ans += 1 << i;
+            }
+        }
+        // for(int i = 31; i >= 0; i--){
+        //     if ((signed)((unsigned)dividend >> i) - divisor >= 0){
+        //         ans += 1 << i;
+        //         dividend -= divisor << i;
+        //     }
+        // }
         
-//         return isneg ? ans : -ans;
-        return ((long long)dividend / divisor) > INT_MAX ? INT_MAX : dividend / divisor;
+        return isneg ? -ans : ans;
+        // return ((long long)dividend / divisor) > INT_MAX ? INT_MAX : dividend / divisor;
     }
 };
