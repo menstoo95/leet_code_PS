@@ -1,8 +1,7 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int minp = 100001;
-        int ans = 0;
+        int minp = 10001, ans = 0;
         
         for(auto p : prices){
             if(minp > p)
