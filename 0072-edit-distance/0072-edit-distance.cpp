@@ -1,13 +1,12 @@
 class Solution {
 public:
-    int dp[502][502];
-    
     int minDistance(string s, string p) {
-        int diff = 0;
-        for(int j = 1; j <= p.size(); j++)
-            dp[0][j] = j;
+        vector<vector<int>> dp(s.size()+1, vector<int>(p.size()+1));
+        
         for(int i = 1; i <= s.size(); i++)
             dp[i][0] = i;
+        for(int j = 1; j <= p.size(); j++)
+            dp[0][j] = j;
         
         for(int i = 1; i <= s.size(); i++){
             for(int j = 1; j <= p.size(); j++){
