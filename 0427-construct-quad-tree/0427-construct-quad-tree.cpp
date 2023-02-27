@@ -49,9 +49,9 @@ public:
                 if(base != grid[i][j]){
                     isLeaf = false;
                 }
-                if(!isLeaf)
-                    break;
             }
+            if(!isLeaf)
+                break;
         }
         
         if(isLeaf){
