@@ -12,8 +12,6 @@ public:
 
     int minEatingSpeed(vector<int> piles, int h)
     {
-        sort(piles.begin(), piles.end());
-
         long long l = 1, r = 1e9;
 
         while (l < r)
