@@ -4,8 +4,6 @@ public:
         if(p.size() == 1)
             return "";
         
-        map<string, int> hs;
-        
         for(int i = 0; i < p.size()/2; i++){
             if(p[i] != 'a'){
                 p[i] = 'a';
