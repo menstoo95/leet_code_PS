@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //삼성식 완탐
     unordered_map<string,bool> hs;
     
     bool isScramble(string s1, string s2) {
