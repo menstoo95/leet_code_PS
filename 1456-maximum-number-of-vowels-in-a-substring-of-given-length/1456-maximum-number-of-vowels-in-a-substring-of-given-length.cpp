@@ -7,15 +7,14 @@ public:
             if(s[i] == 'a' || s[i] == 'e' || s[i] ==  'i' || s[i] == 'o' || s[i] == 'u')
                     ans++;
         
-        int l = 0, res = ans;
+        int res = ans;
         for(int i = k; i < s.size(); i++){
-            if(s[l] == 'a' || s[l] == 'e' || s[l] ==  'i' || s[l] == 'o' || s[l] == 'u')
+            if(s[i-k] == 'a' || s[i-k] == 'e' || s[i-k] ==  'i' || s[i-k] == 'o' || s[i-k] == 'u')
                 res--;
             if(s[i] == 'a' || s[i] == 'e' || s[i] ==  'i' || s[i] == 'o' || s[i] == 'u')
                 res++;
             
             ans = max(res, ans);
-            l++;
         }
         
         return ans;
