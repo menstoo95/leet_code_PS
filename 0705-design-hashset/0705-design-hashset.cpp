@@ -1,9 +1,9 @@
 class MyHashSet {
 private:
-    vector<bool> hs;
+    unordered_map<int,bool> hs;
 public:
     MyHashSet() {
-        hs.resize(1000001);
+        
     }
     
     void add(int key) {
