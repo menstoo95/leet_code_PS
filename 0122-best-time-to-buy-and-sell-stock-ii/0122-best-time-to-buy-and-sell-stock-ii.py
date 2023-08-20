@@ -1,9 +1,11 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        cur = -0x3f3f3f3f
         ans = 0
         
-        for i in range(1, len(prices)):
-            if prices[i-1] < prices[i]:
-                ans += prices[i]-prices[i-1]
-        
-        return ans
+        for p in prices:
+            a, b = cur, ans
+            cur = max(a, b-p)
+            ans = max(b, a+p)
+            
+        return ans;
