@@ -3,8 +3,5 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        tmp = copy.deepcopy(nums)
-
-        for i in range(len(nums)):
-            nums[(i+k)%len(nums)] = tmp[i]
+        nums[:] = nums[len(nums)-(k%len(nums)):] + nums[:len(nums)-(k%len(nums))]
         
