@@ -28,5 +28,4 @@ jobs:
         uses: "pascalgn/automerge-action@v0.16.2"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_UPDATE: "autosquash"
-          MERGE_METHOD: "squash"
+          MERGE_METHOD: squash
